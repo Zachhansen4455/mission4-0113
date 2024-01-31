@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Class1
+namespace TicTakToe
 {
     public class SupportingClass
     {
@@ -32,4 +32,5 @@ public class Class1
         }
 
     }
+
 }
