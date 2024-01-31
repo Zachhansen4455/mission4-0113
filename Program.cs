@@ -1,12 +1,10 @@
-﻿using supportingClass;
-
-supportingClass sC = new supportingClass();
-
+﻿using TicTakToe;
 
 class Program
 {
     static void Main()
     {
+        SupportingClass sC = new SupportingClass();
         // Player 1 is X and Player 2 is O
         int player = 1;
 
@@ -46,7 +44,7 @@ class Program
             // Display the updated game board
 
 
-            sC.PrintBoard()
+            sC.PrintBoard();
             //DisplayGameBoard(gameboard);
         }
         // Call the winners method
