@@ -12,36 +12,35 @@ namespace supportingClass
     // Contain a method that receives the game board array as input and returns if there is a winner and who it was
     public class SupportingClass
     {
-        static char[] board = new char[9];
 
         // print board method
-        public void PrintBoard(char[] board)
+        public void PrintBoard(char[] gameboard)
         {
-            Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");
+            Console.WriteLine($" {gameboard[0]} | {gameboard[1]} | {gameboard[2]} ");
             Console.WriteLine("---|---|---");
-            Console.WriteLine($" {board[3]} | {board[4]} | {board[5]} ");
+            Console.WriteLine($" {gameboard[3]} | {gameboard[4]} | {gameboard[5]} ");
             Console.WriteLine("---|---|---");
-            Console.WriteLine($" {board[6]} | {board[7]} | {board[8]} ");
+            Console.WriteLine($" {gameboard[6]} | {gameboard[7]} | {gameboard[8]} ");
             Console.WriteLine("---|---|---");
         }
 
         //method to check for winners
-        public bool CheckWinner(char player)
+        public bool CheckWinner(char player, char[] gameboard)
         {
             // Check rows, columns, and diagonals for a win
             bool isWinner = 
-                   (board[0] == player && board[1] == player && board[2] == player) ||
-                   (board[3] == player && board[4] == player && board[5] == player) ||
-                   (board[6] == player && board[7] == player && board[8] == player) ||
-                   (board[0] == player && board[3] == player && board[6] == player) ||
-                   (board[1] == player && board[4] == player && board[7] == player) ||
-                   (board[2] == player && board[5] == player && board[8] == player) ||
-                   (board[0] == player && board[4] == player && board[8] == player) ||
-                   (board[2] == player && board[4] == player && board[6] == player);
+                   (gameboard[0] == player && gameboard[1] == player && gameboard[2] == player) ||
+                   (gameboard[3] == player && gameboard[4] == player && gameboard[5] == player) ||
+                   (gameboard[6] == player && gameboard[7] == player && gameboard[8] == player) ||
+                   (gameboard[0] == player && gameboard[3] == player && gameboard[6] == player) ||
+                   (gameboard[1] == player && gameboard[4] == player && gameboard[7] == player) ||
+                   (gameboard[2] == player && gameboard[5] == player && gameboard[8] == player) ||
+                   (gameboard[0] == player && gameboard[4] == player && gameboard[8] == player) ||
+                   (gameboard[2] == player && gameboard[4] == player && gameboard[6] == player);
 
             //check for a tie and full board
             bool isBoardFull = true;
-            foreach (char cell in board)
+            foreach (char cell in gameboard)
             {
                 if (cell == '\0')
                 {
