@@ -1,6 +1,6 @@
 ﻿using supportingClass;
 
-supportingClass sC = new supportingClass();
+SupportingClass sC = new SupportingClass();
 
 
 class Program
