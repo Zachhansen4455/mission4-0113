@@ -15,7 +15,7 @@ namespace supportingClass
         static char[] board = new char[9];
 
         // print board method
-        static void PrintBoard(char[] board)
+        public void PrintBoard(char[] board)
         {
             Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");
             Console.WriteLine("---|---|---");
@@ -26,7 +26,7 @@ namespace supportingClass
         }
 
         //method to check for winners
-        static bool CheckWinner(char player)
+        public bool CheckWinner(char player)
         {
             // Check rows, columns, and diagonals for a win
             bool isWinner = 
