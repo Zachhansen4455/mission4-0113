@@ -44,12 +44,13 @@ class Program
             // Display the updated game board
 
 
-            sC.PrintBoard();
+            sC.PrintBoard(gameboard);
             //DisplayGameBoard(gameboard);
+            sC.CheckWinner(player, gameboard);
         }
         // Call the winners method
 
-        sC.CheckWinner();
+       
     }
 
    // static void DisplayGameBoard(char[] board)
