@@ -1,5 +1,7 @@
 ﻿using supportingClass;
-
+// Group 1-13
+// Landon Webb, Zach Hansen, Kelsey Corfield, Ian Purnell
+// Tic tac toe game program
 class Program
 {
     static void Main()
@@ -40,16 +42,22 @@ class Program
             // Set the corresponding symbol based on the player
             gameboard[position - 1] = (player == 1) ? 'X' : 'O';
 
-
+            // display the board.
             sC.PrintBoard(gameboard);
-            // Display the updated game board
 
+            // check for winner or for a tie.
             if (sC.CheckWinner((player == 1) ? 'X' : 'O', gameboard))
             {
                 Console.WriteLine($"Player {player} wins!");
                 break; // Exit the game loop if a player wins
             }
+            else if (sC.BoardIsFull(gameboard))
+            {
+                Console.WriteLine("It's a tie!");
+                break;
+            }
 
+            // change player
             player = (player == 1) ? 2 : 1;
             
         }

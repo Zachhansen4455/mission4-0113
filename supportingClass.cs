@@ -12,6 +12,7 @@ namespace supportingClass
     // Contain a method that receives the game board array as input and returns if there is a winner and who it was
     public class SupportingClass
     {
+        // board to initialize empty game board.
         public void InitializeBoard(char[] gameboard)
         {
             for (int i = 0; i < 9; i++)
@@ -33,7 +34,7 @@ namespace supportingClass
         public bool CheckWinner(int player, char[] gameboard)
         {
             // Check rows, columns, and diagonals for a win
-            bool isWinner = 
+            bool isWinner =
                    (gameboard[0] == player && gameboard[1] == player && gameboard[2] == player) ||
                    (gameboard[3] == player && gameboard[4] == player && gameboard[5] == player) ||
                    (gameboard[6] == player && gameboard[7] == player && gameboard[8] == player) ||
@@ -43,8 +44,12 @@ namespace supportingClass
                    (gameboard[0] == player && gameboard[4] == player && gameboard[8] == player) ||
                    (gameboard[2] == player && gameboard[4] == player && gameboard[6] == player);
 
+            return isWinner;
+        }
 
-            //check for a tie and full board
+        // method to check if the board is full for tie
+        public bool BoardIsFull(char[] gameboard)
+        {
             bool isBoardFull = true;
             foreach (char cell in gameboard)
             {
@@ -55,10 +60,9 @@ namespace supportingClass
                 }
             }
 
-            return isWinner || (isBoardFull && !isWinner);
+            return isBoardFull;
         }
 
-        //method that sees if board is fu
     }
 
 }
