@@ -22,6 +22,7 @@ class Program
 
         // Make the gameboard array
         char[] gameboard = new char[9];
+        sC.InitializeBoard(gameboard);
 
         // Take the player's guess
         for (int i = 0; i < gameboard.Length; i++)
@@ -43,7 +44,7 @@ class Program
 
             // Display the updated game board
 
-
+            
             sC.PrintBoard();
             //DisplayGameBoard(gameboard);
         }
