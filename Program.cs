@@ -25,7 +25,8 @@ class Program
         sC.InitializeBoard(gameboard);
 
         // Take the player's guess
-        for (int i = 0; i < gameboard.Length; i++)
+        //for (int i = 0; i < gameboard.Length; i++)
+        while (true)
         {
             Console.WriteLine($"Player {player},Please choose a number between 1 and 9 to make your move!");
 
@@ -39,29 +40,24 @@ class Program
             // Set the corresponding symbol based on the player
             gameboard[position - 1] = (player == 1) ? 'X' : 'O';
 
-            // Switch to the next player
-            player = (player == 1) ? 2 : 1;
-
-            // Display the updated game board
-
 
             sC.PrintBoard(gameboard);
-            //DisplayGameBoard(gameboard);
-            sC.CheckWinner(player, gameboard);
+            // Display the updated game board
+
+            if (sC.CheckWinner((player == 1) ? 'X' : 'O', gameboard))
+            {
+                Console.WriteLine($"Player {player} wins!");
+                break; // Exit the game loop if a player wins
+            }
+
+            player = (player == 1) ? 2 : 1;
+            
         }
         // Call the winners method
 
        
     }
 
-   // static void DisplayGameBoard(char[] board)
-    //{
-        ///Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");
-        //Console.WriteLine("---|---|---");
-        //Console.WriteLine($" {board[3]} | {board[4]} | {board[5]} ");
-        //Console.WriteLine("---|---|---");
-        //Console.WriteLine($" {board[6]} | {board[7]} | {board[8]} ");
-    //}
 }
 
 

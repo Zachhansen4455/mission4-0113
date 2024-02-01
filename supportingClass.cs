@@ -43,10 +43,6 @@ namespace supportingClass
                    (gameboard[0] == player && gameboard[4] == player && gameboard[8] == player) ||
                    (gameboard[2] == player && gameboard[4] == player && gameboard[6] == player);
 
-            if (isWinner == true)
-            {
-                Console.WriteLine("You won");
-            };
 
             //check for a tie and full board
             bool isBoardFull = true;
