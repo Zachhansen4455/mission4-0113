@@ -30,7 +30,7 @@ class Program
         //for (int i = 0; i < gameboard.Length; i++)
         while (true)
         {
-            Console.WriteLine($"Player {player},Please choose a number between 1 and 9 to make your move!");
+            Console.WriteLine($"Player {player}, Please choose a number between 1 and 9 to make your move!");
 
             // Convert user input to integer
             int position;
