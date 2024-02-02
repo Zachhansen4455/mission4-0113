@@ -7,6 +7,7 @@ class Program
     static void Main()
     {
         SupportingClass sC = new SupportingClass();
+        
         // Player 1 is X and Player 2 is O
         int player = 1;
 
@@ -27,7 +28,7 @@ class Program
         sC.InitializeBoard(gameboard);
 
         // Take the player's guess
-        //for (int i = 0; i < gameboard.Length; i++)
+        // while loop to play the game.
         while (true)
         {
             Console.WriteLine($"Player {player}, Please choose a number between 1 and 9 to make your move!");
@@ -61,9 +62,7 @@ class Program
             player = (player == 1) ? 2 : 1;
             
         }
-        // Call the winners method
-
-       
+        
     }
 
 }

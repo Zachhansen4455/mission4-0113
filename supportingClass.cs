@@ -20,6 +20,7 @@ namespace supportingClass
                 gameboard[i] = '\0'; // Initialize board with empty cells
             }
         }
+
         // print board method
         public void PrintBoard(char[] gameboard)
         {
